@@ -15,6 +15,10 @@ Max Brightness, Brightness, Color Temperature, Timing.
 > reverse-engineering a similar remote, its FCC filing is a genuinely useful
 > cross-check.
 
+The lamp tested is a Pzloz 24W desk lamp from [Amazon](https://www.amazon.com/gp/aw/d/B0BRCJL4MM), but the remote seems to be a generic controller that may also be sold with other lamps.
+
+<img width="1080" height="1080" alt="Lamp-and-remote-image" src="https://github.com/user-attachments/assets/16d8296b-9beb-4719-a319-5ef02384494b" />
+
 ---
 
 ## What this does
