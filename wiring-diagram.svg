@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="monospace" font-size="13">
+  <rect width="760" height="560" fill="#ffffff"/>
+  <text x="380" y="30" text-anchor="middle" font-size="18" font-weight="bold">ESP32-WROOM-32U  ↔  CC1101 (433 MHz)</text>
+  <text x="380" y="50" text-anchor="middle" font-size="12" fill="#b00020" font-weight="bold">CC1101 VCC = 3.3 V ONLY — 5 V destroys the module</text>
+
+  <!-- ESP32 board -->
+  <rect x="60" y="90" width="200" height="380" rx="8" fill="#eef3fb" stroke="#26467a" stroke-width="2"/>
+  <text x="160" y="115" text-anchor="middle" font-weight="bold" fill="#26467a">ESP32 DevKit</text>
+
+  <!-- ESP32 pin labels (right edge, where wires leave) -->
+  <g text-anchor="end">
+    <text x="250" y="160">3V3</text>
+    <text x="250" y="195">GND</text>
+    <text x="250" y="230">GPIO5</text>
+    <text x="250" y="265">GPIO18</text>
+    <text x="250" y="300">GPIO23</text>
+    <text x="250" y="335">GPIO19</text>
+    <text x="250" y="370">GPIO4</text>
+  </g>
+  <!-- ESP32 pin dots -->
+  <g fill="#26467a">
+    <circle cx="260" cy="156" r="4"/>
+    <circle cx="260" cy="191" r="4"/>
+    <circle cx="260" cy="226" r="4"/>
+    <circle cx="260" cy="261" r="4"/>
+    <circle cx="260" cy="296" r="4"/>
+    <circle cx="260" cy="331" r="4"/>
+    <circle cx="260" cy="366" r="4"/>
+  </g>
+
+  <!-- CC1101 board -->
+  <rect x="500" y="90" width="200" height="380" rx="8" fill="#fbf0ee" stroke="#7a2f26" stroke-width="2"/>
+  <text x="600" y="115" text-anchor="middle" font-weight="bold" fill="#7a2f26">CC1101</text>
+
+  <!-- CC1101 pin labels (left edge) -->
+  <g text-anchor="start">
+    <text x="510" y="160">VCC (3.3V)</text>
+    <text x="510" y="195">GND</text>
+    <text x="510" y="230">CSN</text>
+    <text x="510" y="265">SCK</text>
+    <text x="510" y="300">MOSI</text>
+    <text x="510" y="335">MISO</text>
+    <text x="510" y="370">GDO0</text>
+    <text x="510" y="405" fill="#999">GDO2 (n/c)</text>
+    <text x="510" y="440" fill="#2f7a3a">ANT → 17.3cm wire</text>
+  </g>
+  <!-- CC1101 pin dots -->
+  <g fill="#7a2f26">
+    <circle cx="500" cy="156" r="4"/>
+    <circle cx="500" cy="191" r="4"/>
+    <circle cx="500" cy="226" r="4"/>
+    <circle cx="500" cy="261" r="4"/>
+    <circle cx="500" cy="296" r="4"/>
+    <circle cx="500" cy="331" r="4"/>
+    <circle cx="500" cy="366" r="4"/>
+    <circle cx="500" cy="401" r="4" fill="#bbb"/>
+    <circle cx="500" cy="436" r="4" fill="#2f7a3a"/>
+  </g>
+
+  <!-- wires -->
+  <g fill="none" stroke-width="2.5">
+    <path d="M260 156 H500" stroke="#d11"/>
+    <path d="M260 191 H500" stroke="#000"/>
+    <path d="M260 226 H500" stroke="#e08a00"/>
+    <path d="M260 261 H500" stroke="#2f7a3a"/>
+    <path d="M260 296 H500" stroke="#2564c9"/>
+    <path d="M260 331 H500" stroke="#8a2be2"/>
+    <path d="M260 366 H500" stroke="#c9256b"/>
+  </g>
+
+  <!-- wire mid labels -->
+  <g text-anchor="middle" font-size="11" fill="#555">
+    <text x="380" y="150">power</text>
+    <text x="380" y="185">ground</text>
+    <text x="380" y="220">chip select (cs_pin)</text>
+    <text x="380" y="255">SPI clock</text>
+    <text x="380" y="290">SPI MOSI</text>
+    <text x="380" y="325">SPI MISO</text>
+    <text x="380" y="360">OOK data in (data_pin)</text>
+  </g>
+
+  <!-- antenna stub -->
+  <path d="M500 436 H470 M470 436 v-8" fill="none" stroke="#2f7a3a" stroke-width="2.5"/>
+
+  <text x="380" y="505" text-anchor="middle" font-size="11" fill="#555">SPI pins (GPIO18/23/19) are the ESP32 VSPI defaults. GPIO5 = CS, GPIO4 = data.</text>
+  <text x="380" y="525" text-anchor="middle" font-size="11" fill="#555">Do NOT set gdo0_pin in the cc1101: block — see WIRING.md (ESPHome #16876).</text>
+</svg>
